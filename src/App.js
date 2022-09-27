@@ -73,7 +73,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="app__left">
+      <div className="left-side">
         <div className="app__header">
           <h1>COVID-19 Tracker</h1>
           <FormControl className="app__dropdown">
@@ -100,14 +100,14 @@ const App = () => {
           />
           <InfoBox
             onClick={(e) => setCasesType("recovered")}
-            title="Recovered"
+            title="Recovered Cases"
             active={casesType === "recovered"}
             cases={prettyPrintStat(countryInfo.todayRecovered)}
             total={numeral(countryInfo.recovered).format("0.0a")}
           />
           <InfoBox
             onClick={(e) => setCasesType("deaths")}
-            title="Deaths"
+            title="Death Cases"
             isRed
             active={casesType === "deaths"}
             cases={prettyPrintStat(countryInfo.todayDeaths)}
@@ -121,7 +121,8 @@ const App = () => {
           zoom={mapZoom}
         />
       </div>
-      <Card className="app__right">
+      <div className="right-side">
+      <Card>
         <CardContent>
           <div className="app__information">
             <h3>Live Cases by Country</h3>
@@ -131,6 +132,7 @@ const App = () => {
           </div>
         </CardContent>
       </Card>
+      </div>
     </div>
   );
 };

@@ -26,7 +26,7 @@ body {
 
 .app__header > h1 {
   color: #fc3c3c;
-  font-size: 2rem;
+  font-size: 32px;
 }
 
 .app__stats {
@@ -34,23 +34,33 @@ body {
   justify-content: space-between;
 }
 
-.app__left {
+.left-side {
   flex: 0.9;
 }
 
+.right-side{
+  box-shadow: 2px 4px 10px #939292;
+  height: 700px;
+}
+
+
 .app__information > h3 {
-  color: #6a5d5d;
+  color: #040870;
   font-weight: 400;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
 .app__information > h3:last-of-type {
-  margin-top: 1rem;
+  margin-top: 15px;
 }
 
 @media (max-width: 990px) {
   .app {
     flex-direction: column;
+  }
+  .right-side{
+    margin-top: 15px;
+    margin-bottom: 10px
   }
 }
